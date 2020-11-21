@@ -2,7 +2,7 @@ import sys, math
 
 from PyQt5.QtGui import QPainter, QColor
 from PyQt5 import uic
-from PyQt5.QtWidgets import QMainWindow, QApplication, QLabel, QLCDNumber
+from PyQt5.QtWidgets import QMainWindow, QApplication
 
 
 class Window(QMainWindow):
@@ -10,7 +10,7 @@ class Window(QMainWindow):
         super(Window, self).__init__()
         uic.loadUi('UI.ui', self)
         self.setWindowTitle('Желтые кружочки')
-        self.pushButton.clicked(self.paintEvent)
+        self.pushButton.clicked.connect(self.paintEvent)
 
     def paintEvent(self):
         qp = QPainter()
