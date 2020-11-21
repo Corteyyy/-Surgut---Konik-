@@ -10,7 +10,7 @@ class Window(QMainWindow):
     def __init__(self):
         super(Window, self).__init__()
         uic.loadUi('UI.ui', self)
-        self.setWindowTitle('кружочки')
+        self.setWindowTitle('Желтые кружочки')
         self.pushButton.clicked.connect(self.paint)
         self.do_paint = False
 
@@ -27,7 +27,7 @@ class Window(QMainWindow):
 
     def draw_flag(self, qp):
         for _ in range(random.randint(0, 12)):
-            qp.setBrush(QColor(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
+            qp.setBrush(QColor(254, 254, 2))
             qp.drawEllipse(random.randint(0, 361), random.randint(0, 254), 60, 60)
 
 if __name__ == '__main__':
