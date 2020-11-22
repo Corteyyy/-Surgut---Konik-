@@ -28,7 +28,8 @@ class Window(QMainWindow):
     def draw_flag(self, qp):
         for _ in range(random.randint(0, 12)):
             qp.setBrush(QColor(254, 254, 2))
-            qp.drawEllipse(random.randint(0, 361), random.randint(0, 254), 60, 60)
+            a = random.randint(0, 75)
+            qp.drawEllipse(random.randint(0, 361), random.randint(0, 254), a, a)
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
